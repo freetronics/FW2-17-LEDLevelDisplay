@@ -632,6 +632,23 @@ Basic small signal diode good up to 200mA. SMB footprint. Common part #: BAS16</
 <text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 </package>
+<package name="DIODE-1N914">
+<wire x1="-1.27" y1="0.762" x2="1.27" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="0.762" x2="1.27" y2="0" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="-0.762" x2="-1.27" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-0.762" x2="-1.27" y2="0" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="0" x2="1.524" y2="0" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="0" x2="-1.524" y2="0" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="0.635" x2="0.635" y2="-0.635" width="0.2032" layer="21"/>
+<pad name="A" x="-2.54" y="0" drill="0.9"/>
+<pad name="C" x="2.54" y="0" drill="0.9"/>
+<text x="-1.27" y="1.27" size="0.4064" layer="25">&gt;Name</text>
+<text x="-2.286" y="-1.778" size="0.762" layer="21">&gt;Value</text>
+<wire x1="0.889" y1="0.635" x2="0.889" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="0.762" y1="0.635" x2="0.762" y2="-0.635" width="0.2032" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="BJTNPN">
@@ -883,6 +900,15 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <technology name=""/>
 </technologies>
 </device>
+<device name="1N914" package="DIODE-1N914">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="M01" prefix="JP">
@@ -953,41 +979,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <connect gate="G$1" pin="C" pad="1"/>
 <connect gate="G$1" pin="E" pad="3"/>
 </connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="freetronics-original">
-<description>Spark Fun Electronics' preferred foot prints. We've spent an enormous amount of time creating and checking these footprints and parts.
-If you enjoy using this library, please buy one of our products at http://www.sparkfun.com.
-Please also note that we guarantee that there are some messed up footprints in this library.
-We've tried to note which are proven and tested but by downloading this file, you acknowledge that you are using this file at your own risk.
-We cannot be held responsible for faulty PCBs. Always check your parts against a 1:1 printout.
-
-Licensing: CC v3.0 Share-Alike You are welcome to use this library for commercial purposes.
-For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold.
-We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="GND">
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" prefix="GND">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -4590,11 +4581,11 @@ type RDH, grid 15 mm</description>
 <part name="R14" library="resistor" deviceset="R-EU_" device="0309/V" value="10K"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="0309/V" value="330R"/>
 <part name="LED2" library="freetronics-master-v1.1" deviceset="LED" device="5MM"/>
-<part name="D2" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
-<part name="D3" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
-<part name="D4" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
-<part name="D5" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
-<part name="D6" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
+<part name="D2" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
+<part name="D3" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
+<part name="D4" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
+<part name="D5" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
+<part name="D6" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
 <part name="Q4" library="freetronics-master-v1.1" deviceset="BC547" device=""/>
 <part name="Q5" library="freetronics-master-v1.1" deviceset="BC547" device=""/>
 <part name="Q6" library="freetronics-master-v1.1" deviceset="BC547" device=""/>
@@ -4623,14 +4614,13 @@ type RDH, grid 15 mm</description>
 <part name="LED7" library="freetronics-master-v1.1" deviceset="LED" device="5MM"/>
 <part name="LED8" library="freetronics-master-v1.1" deviceset="LED" device="5MM"/>
 <part name="LED9" library="freetronics-master-v1.1" deviceset="LED" device="5MM"/>
-<part name="D7" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
-<part name="D8" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
-<part name="D9" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
-<part name="JP1" library="freetronics-master-v1.1" deviceset="M01" device="PTH"/>
-<part name="JP2" library="freetronics-master-v1.1" deviceset="M01" device="PTH"/>
-<part name="JP3" library="freetronics-master-v1.1" deviceset="M01" device="PTH"/>
-<part name="JP4" library="freetronics-master-v1.1" deviceset="M01" device="PTH"/>
-<part name="GND1" library="freetronics-original" deviceset="GND" device=""/>
+<part name="D7" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
+<part name="D8" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
+<part name="D9" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
+<part name="JP1" library="freetronics-master-v1.1" deviceset="M01" device="PTH" value="IN+"/>
+<part name="JP2" library="freetronics-master-v1.1" deviceset="M01" device="PTH" value="IN-"/>
+<part name="JP3" library="freetronics-master-v1.1" deviceset="M01" device="PTH" value="PWR+"/>
+<part name="JP4" library="freetronics-master-v1.1" deviceset="M01" device="PTH" value="PWR-"/>
 <part name="C2" library="SparkFun" deviceset="CAP_POL" device="PTH1" value="2.2uF"/>
 <part name="C1" library="SparkFun" deviceset="CAP_POL" device="PTH1" value="2.2uF"/>
 <part name="R2" library="freetronics" deviceset="FREETRONICS_RESISTOR" device="PTH2" value="4K7"/>
@@ -4639,22 +4629,37 @@ type RDH, grid 15 mm</description>
 <part name="R12" library="resistor" deviceset="R-EU_" device="0309/V" value="330R"/>
 <part name="Q11" library="freetronics-master-v1.1" deviceset="BC547" device=""/>
 <part name="R22" library="resistor" deviceset="R-EU_" device="0309/V" value="2K7"/>
-<part name="D10" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
-<part name="D1" library="freetronics-master-v1.1" deviceset="DIODE" device="1N4148" value="1N914"/>
+<part name="D10" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
+<part name="D1" library="freetronics-master-v1.1" deviceset="DIODE" device="1N914" value="1N4148"/>
 <part name="R1" library="freetronics" deviceset="FREETRONICS_RESISTOR" device="PTH2" value="470R"/>
 <part name="Q1" library="freetronics-master-v1.1" deviceset="BC557" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="154.94" y="12.7" size="3.048" layer="94">Freetronics Security Sensor Shield</text>
+<text x="129.54" y="12.7" size="3.048" layer="94">LED Level Display (Funway compatible)</text>
 <text x="215.9" y="6.858" size="1.778" layer="94">V1.0 (2016-10-06)</text>
-<text x="5.08" y="4.318" size="1.778" layer="94">SKU: SH-SECSENSE</text>
-<text x="154.686" y="6.858" size="1.778" layer="94">www.freetronics.com.au/fw2-level</text>
+<text x="129.286" y="6.858" size="1.778" layer="94">www.freetronics.com.au/fw2-level</text>
 <frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94"/>
-<frame x1="152.4" y1="5.08" x2="243.84" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
-<frame x1="152.4" y1="5.08" x2="213.36" y2="10.16" columns="8" rows="5" layer="94"/>
+<frame x1="127" y1="5.08" x2="243.84" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
+<frame x1="127" y1="5.08" x2="187.96" y2="10.16" columns="8" rows="5" layer="94"/>
 <frame x1="213.36" y1="5.08" x2="243.84" y2="10.16" columns="8" rows="5" layer="94"/>
+<wire x1="233.68" y1="132.08" x2="238.76" y2="132.08" width="0.4064" layer="97"/>
+<wire x1="238.76" y1="132.08" x2="243.84" y2="132.08" width="0.4064" layer="97"/>
+<wire x1="236.22" y1="129.54" x2="238.76" y2="129.54" width="0.8128" layer="97"/>
+<wire x1="238.76" y1="129.54" x2="241.3" y2="129.54" width="0.8128" layer="97"/>
+<wire x1="233.68" y1="116.84" x2="243.84" y2="116.84" width="0.4064" layer="97"/>
+<wire x1="236.22" y1="114.3" x2="238.76" y2="114.3" width="0.8128" layer="97"/>
+<wire x1="238.76" y1="114.3" x2="241.3" y2="114.3" width="0.8128" layer="97"/>
+<wire x1="238.76" y1="124.46" x2="238.76" y2="121.92" width="0.4064" layer="97"/>
+<wire x1="238.76" y1="119.38" x2="238.76" y2="116.84" width="0.4064" layer="97"/>
+<wire x1="238.76" y1="132.08" x2="238.76" y2="139.7" width="0.4064" layer="97"/>
+<wire x1="238.76" y1="114.3" x2="238.76" y2="106.68" width="0.4064" layer="97"/>
+<wire x1="238.76" y1="127" x2="238.76" y2="129.54" width="0.4064" layer="97"/>
+<text x="241.3" y="121.92" size="1.778" layer="97" ratio="15">9V</text>
+<text x="241.3" y="134.62" size="3.81" layer="97" ratio="15">+</text>
+<text x="241.3" y="109.22" size="3.81" layer="97" ratio="15">-</text>
+<text x="7.62" y="119.38" size="1.778" layer="97" ratio="15">INPUT</text>
 </plain>
 <instances>
 <instance part="Q2" gate="G$1" x="66.04" y="116.84" smashed="yes">
@@ -4782,11 +4787,10 @@ type RDH, grid 15 mm</description>
 <instance part="D7" gate="G$1" x="152.4" y="96.52"/>
 <instance part="D8" gate="G$1" x="170.18" y="96.52"/>
 <instance part="D9" gate="G$1" x="187.96" y="96.52"/>
-<instance part="JP1" gate="G$1" x="10.16" y="147.32"/>
+<instance part="JP1" gate="G$1" x="10.16" y="134.62"/>
 <instance part="JP2" gate="G$1" x="10.16" y="101.6"/>
 <instance part="JP3" gate="G$1" x="238.76" y="147.32" rot="R180"/>
 <instance part="JP4" gate="G$1" x="238.76" y="101.6" rot="R180"/>
-<instance part="GND1" gate="1" x="25.4" y="17.78"/>
 <instance part="C2" gate="G$1" x="45.72" y="111.76"/>
 <instance part="C1" gate="G$1" x="27.94" y="121.92"/>
 <instance part="R2" gate="G$1" x="38.1" y="109.22" smashed="yes" rot="R90">
@@ -4809,9 +4813,9 @@ type RDH, grid 15 mm</description>
 </instance>
 <instance part="D10" gate="G$1" x="205.74" y="96.52"/>
 <instance part="D1" gate="G$1" x="27.94" y="134.62" rot="R90"/>
-<instance part="R1" gate="G$1" x="20.32" y="134.62" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.8214" y="133.35" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="23.622" y="133.35" size="1.778" layer="96" rot="R90"/>
+<instance part="R1" gate="G$1" x="20.32" y="127" smashed="yes" rot="R90">
+<attribute name="NAME" x="18.8214" y="125.73" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="23.622" y="125.73" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="Q1" gate="G$1" x="35.56" y="129.54"/>
 </instances>
@@ -5149,15 +5153,15 @@ type RDH, grid 15 mm</description>
 <segment>
 <pinref part="VR1" gate="G$1" pin="E"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="119.38" x2="20.32" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="119.38" x2="20.32" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$47" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="20.32" y1="139.7" x2="20.32" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="132.08" x2="20.32" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="147.32" x2="17.78" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="134.62" x2="17.78" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
