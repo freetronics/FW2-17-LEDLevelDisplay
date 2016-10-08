@@ -1,7 +1,7 @@
 LED Level Display
 =================
 Copyright 2016 Freetronics Pty Ltd  
-Freetronics site:  <www.freetronics.com.au>  
+Freetronics site:  http://www.freetronics.com.au  
 Freetronics email: <info@freetronics.com>  
 
 Based on the project "LED Level Display" described in the book "Funway
