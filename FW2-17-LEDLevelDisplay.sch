@@ -4637,7 +4637,7 @@ type RDH, grid 15 mm</description>
 <sheets>
 <sheet>
 <plain>
-<text x="129.54" y="12.7" size="3.048" layer="94">LED Level Display (Funway compatible)</text>
+<text x="129.54" y="12.7" size="3.048" layer="94">LED Level Display (Fun Way compatible)</text>
 <text x="215.9" y="6.858" size="1.778" layer="94">V1.0 (2016-10-06)</text>
 <text x="129.286" y="6.858" size="1.778" layer="94">www.freetronics.com.au/fw2-level</text>
 <frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94"/>
